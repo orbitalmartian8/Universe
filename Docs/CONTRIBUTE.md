@@ -11,6 +11,14 @@ Then,
 ./compile.sh
 ```
 
+Alternatively you could run
+
+```bash
+g++ -o Everything main.cpp
+```
+
+^ But this is subject to change when new files are added, etc.
+
 ### To Run
 To run {Everything}, simply enter ```./Everything```.
 
