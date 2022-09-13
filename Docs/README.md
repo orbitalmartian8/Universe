@@ -11,12 +11,12 @@ Well, I've wanted something to do everything for a while now, and nothing I've f
 <summary>📁 Roadmap</summary>
 <br>
 
-   | Task | Status | Expected Release |  |
-   | :--- | :--- | :--- | :--- |
-   | Add window | In Progress | v0.1 |  |
-   | Add scrip tab | Not Started | v0.1 |  |
-   | Add run script buttons | Not Started | v0.1 |  |
-   | Add terminal tab  | Not Started | v0.5 |  |
+   | Task | Status | Expected Release |
+   | :--- | :--- | :--- |
+   | Add window | In Progress | v0.1 |
+   | Add scrip tab | Not Started | v0.1 |
+   | Add run script buttons | Not Started | v0.1 |
+   | Add terminal tab  | Not Started | v0.5 |
 <br>
 </details>
 
