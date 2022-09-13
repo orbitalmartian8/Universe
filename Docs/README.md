@@ -10,8 +10,6 @@ Well, I've wanted something to do everything for a while now, and nothing I've f
 <details>
 <summary>📁 Roadmap</summary>
 <br>
-   I have many projects in my repos, but the ones that I want to highlight are the following:   
-   
    | Task | Status | Expected Release |  |
    | :--- | :--- | :--- | :--- |
    | Add window | In Progress | v0.1 |  |
