@@ -1,4 +1,8 @@
-<h1>IN MEMORY OF QUEEN ELIZABETH THE 2ND | 1926-2022</h1>
+<details>
+<summary>IN MEMORY OF QUEEN ELIZABETH THE 2ND | 1926-2022</summary>
+On 8<sup>th</sup> September 2022, Queen Elizabeth II died peacefully at Balmoral Castle, Scotland. This banner is in memorial of her, and as such will be up until the date of her funeral (Monday 19th September 2022). R.I.P. Her Majesty.
+</details>
+<br>
 
 # What is Universe?
 Universe is an app to do pretty much everything, from running little bash/python scripts, to running terminal commands, all the way to browsing the web.
