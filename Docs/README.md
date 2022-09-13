@@ -7,6 +7,20 @@ The reason it's called {Everything} is because at the moment, I don't have a nam
 # Why create {Everything}?
 Well, I've wanted something to do everything for a while now, and nothing I've found has met the specific needs that I have, which is why I started this project. Everyone is allowed to contribute, and contributions are encouraged.
 
+<details>
+<summary>📁 Roadmap</summary>
+<br>
+   I have many projects in my repos, but the ones that I want to highlight are the following:   
+   
+   | Task | Status | Expected Release |  |
+   | :--- | :--- | :--- | :--- |
+   | Add window | In Progress | v0.1 |  |
+   | Add scrip tab | Not Started | v0.1 |  |
+   | Add run script buttons | Not Started | v0.1 |  |
+   | Add terminal tab  | Not Started | v0.5 |  |
+<br>
+</details>
+
 # Other Information
 ## How to contribute
 To find how to contribute, please visit [CONTRIBUTE.md](CONTRIBUTE.md)
