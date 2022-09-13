@@ -7,5 +7,8 @@ The reason it's called {Everything} is because at the moment, I don't have a nam
 # Why create {Everything}?
 Well, I've wanted something to do everything for a while now, and nothing I've found has met the specific needs that I have, which is why I started this project. Everyone is allowed to contribute, and contributions are encouraged.
 
-### EddieHub Good First Issues
+# Other Information
+## How to contribute
+To find how to contribute, please visit [CONTRIBUTE.md](CONTRIBUTE.md)
+### EddieHub Good First
 As a member of [EddieHub](https://github.com/EddieHubCommunity), I have added the "Good First Issue" tag to the issues section, as such if you are new to contributing or open source or coding, then you can check those out, they are easy little fixes that can be a great place for you to start you're journey as an open source contributer.
