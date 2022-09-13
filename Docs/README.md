@@ -10,6 +10,7 @@ Well, I've wanted something to do everything for a while now, and nothing I've f
 <details>
 <summary>📁 Roadmap</summary>
 <br>
+
    | Task | Status | Expected Release |  |
    | :--- | :--- | :--- | :--- |
    | Add window | In Progress | v0.1 |  |
