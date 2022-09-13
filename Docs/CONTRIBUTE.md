@@ -2,7 +2,7 @@
 Fork the repo:
 
 ```bash
-git clone --recursive https://github.com/LinuxGamer/Everything
+git clone --recursive https://github.com/LinuxGamer/Universe
 ```
 
 Then, 
@@ -14,13 +14,13 @@ Then,
 Alternatively you could run
 
 ```bash
-g++ -o Everything main.cpp
+g++ -o Universe main.cpp
 ```
 
 ^ But this is subject to change when new files are added, etc.
 
 ### To Run
-To run {Everything}, simply enter ```./Everything```.
+To run Universe, simply enter ```./Everything```.
 
 ## First contributers
 

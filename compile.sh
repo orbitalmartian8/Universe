@@ -1,3 +1,3 @@
 #! /bin/bash
 
-g++ -o Everything main.cpp
+g++ -o Universe main.cpp
