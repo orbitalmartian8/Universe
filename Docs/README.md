@@ -10,5 +10,3 @@ Well, I've wanted something to do everything for a while now, and nothing I've f
 # Other Information
 ## How to contribute
 To find how to contribute, please visit [CONTRIBUTE.md](CONTRIBUTE.md)
-### EddieHub Good First
-As a member of [EddieHub](https://github.com/EddieHubCommunity), I have added the "Good First Issue" tag to the issues section, as such if you are new to contributing or open source or coding, then you can check those out, they are easy little fixes that can be a great place for you to start you're journey as an open source contributer.
