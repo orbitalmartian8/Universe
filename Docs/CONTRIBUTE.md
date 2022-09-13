@@ -1,6 +1,9 @@
 # How to contribute?
-
-
+Fork the repo:
+    ```bash
+    git clone --recursive https://github.com/LinuxGamer/Everything
+    ```
+Then, 
 
 
 ## First contributers
