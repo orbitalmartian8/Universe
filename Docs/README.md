@@ -1,3 +1,5 @@
+<h1>IN MEMORY OF QUEEN ELIZABETH THE 2ND | 1926-2022</h1>
+
 # What is Universe?
 Universe is an app to do pretty much everything, from running little bash/python scripts, to running terminal commands, all the way to browsing the web.
 
