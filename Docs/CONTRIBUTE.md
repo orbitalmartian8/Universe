@@ -1,10 +1,18 @@
 # How to contribute?
 Fork the repo:
-    ```bash
-    git clone --recursive https://github.com/LinuxGamer/Everything
-    ```
+
+```bash
+git clone --recursive https://github.com/LinuxGamer/Everything
+```
+
 Then, 
 
+```bash
+./compile.sh
+```
+
+### To Run
+To run {Everything}, simply enter ```./Everything```.
 
 ## First contributers
 
