@@ -284,15 +284,27 @@ class MyWindow3(Gtk.Window):
         label1 = Gtk.Label(label="Terminal")
         label1.set_hexpand(True)
 
+        # button20 = Gtk.Button(label="Back To Main Menu")
+        # button20.set_hexpand(True)
+        # button20.connect("clicked", self.on_button20_clicked)
+
         grid3.attach(label1, 1, 1, 1, 1)
+        # grid3.attach(button20, 0, 6, 1, 1)
         grid3.attach(exit, 1, 6, 1, 1)
         
         self.add(frame3)
         frame3.add(grid3)
+        
+        def on_button20_clicked(self, widget):
+            print("Back To Main Menu")
+            win3.hide()
+            win1.show_all()
 
         def on_exit_clicked(self, widget):
             print("Exit")
             exit.connect("clicked", Gtk.main_quit)
+
+        
 
 win1 = MyWindow1()
 win2 = MyWindow2()
