@@ -71,6 +71,10 @@ class MyWindow1(Gtk.Window):
         terminal.set_hexpand(True)
         terminal.connect("clicked", self.on_terminal_clicked)
 
+        entry = Gtk.Button(label="EntryWindow")
+        entry.set_hexpand(True)
+        entry.connect("clicked", self.on_entry_clicked)
+
         button7 = Gtk.Button(label="Exit")
         button7.set_hexpand(True)
         button7.connect("clicked", Gtk.main_quit)
@@ -84,6 +88,7 @@ class MyWindow1(Gtk.Window):
         grid1.attach(button3, 2, 7, 1, 1)
         grid1.attach(launcher, 0, 16, 1, 1)
         grid1.attach(terminal, 1 ,16, 1, 1)
+        grid1.attach(entry, 2, 16, 1, 1)
         grid1.attach(button7, 2, 30, 1, 1)
         grid1.attach(label4,  0, 15, 3, 1)
 
@@ -114,6 +119,12 @@ class MyWindow1(Gtk.Window):
         subprocess.run(
         win1.hide(),
         win2.show_all())
+
+    def on_entry_clicked(self, widget):
+        print("User chose: EntryWindow")
+        subprocess.run(
+            win1.hide(),
+            EntryWindow.show())
 
     def save_settings(self, state):
         with open(settings, "w") as f:
@@ -288,8 +299,6 @@ class MyWindow3(Gtk.Window):
         grid3 = Gtk.Grid(row_spacing    = 10,
                          column_spacing = 10,
                          column_homogeneous = True)
-       
-
 
 win1 = MyWindow1()
 win2 = MyWindow2()
