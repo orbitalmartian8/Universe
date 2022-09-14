@@ -20,7 +20,7 @@ Well, I've wanted something to do everything for a while now, and nothing I've f
 <details>
 <summary>Screenshots</summary>
 
-![Home Screen of Universe](Docs/Screenies/universe-screenie1.png "Home Screen of Universe")
+![Home Screen of Universe](Screenies/universe-screenie1.png "Home Screen of Universe")
 </details>
 
 <details>
