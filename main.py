@@ -48,17 +48,13 @@ class MyWindow1(Gtk.Window):
         label4 = Gtk.Label(label="Things to do:")
         label4.set_hexpand(True)
 
-        button1 = Gtk.Button(label="About Universe")
-        button1.set_hexpand(True)
-        button1.connect("clicked", self.on_button1_clicked)
+        about = Gtk.Button(label="About Universe")
+        about.set_hexpand(True)
+        about.connect("clicked", self.on_about_clicked)
 
-        button2 = Gtk.Button(label="Knowledge Base")
-        button2.set_hexpand(True)
-        button2.connect("clicked", self.on_button2_clicked)
-
-        button3 = Gtk.Button(label="Contribute")
-        button3.set_hexpand(True)
-        button3.connect("clicked", self.on_button3_clicked)
+        contribute = Gtk.Button(label="Contribute")
+        contribute.set_hexpand(True)
+        contribute.connect("clicked", self.on_contribute_clicked)
 
         launcher = Gtk.Button(label="App Launcher")
         launcher.set_hexpand(True)
@@ -76,9 +72,8 @@ class MyWindow1(Gtk.Window):
         grid1.attach(label1,  0, 2, 3, 2)
         grid1.attach(label2,  0, 4, 3, 2)
         grid1.attach(label3,  0, 6, 3, 1)
-        grid1.attach(button1, 0, 7, 1, 1)
-        grid1.attach(button2, 1, 7, 1, 1)
-        grid1.attach(button3, 2, 7, 1, 1)
+        grid1.attach(about, 0, 7, 1, 1)
+        grid1.attach(contribute, 1, 7, 1, 1)
         grid1.attach(launcher, 0, 16, 1, 1)
         grid1.attach(terminal, 1 ,16, 1, 1)
         grid1.attach(button7, 2, 30, 1, 1)
@@ -94,15 +89,11 @@ class MyWindow1(Gtk.Window):
         win3.show_all())
         
 
-    def on_button1_clicked(self, widget):
+    def on_about_clicked(self, widget):
         print("User chose: About Universe")
         subprocess.run(["xdg-open", "https://github.com/LinuxGamer/Universe"])
 
-    def on_button2_clicked(self, widget):
-        print("User chose: Knowledge Base")
-        subprocess.run(["xdg-open", "https://github.com/LinuxGamer/Universe"])
-
-    def on_button3_clicked(self, widget):
+    def on_contribute_clicked(self, widget):
         print("User chose: Contribute")
         subprocess.run(["xdg-open", "https://github.com/LinuxGamer/Universe/blob/main/Docs/CONTRIBUTE.md"])
 

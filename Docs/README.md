@@ -11,9 +11,6 @@ On 8<sup>th</sup> September 2022, Queen Elizabeth II died peacefully at Balmoral
 </details>
 <br>
 
-## Would you like to view an accessible version of this README?
-[If you would like to view an accessible README - click here!]()
-
 # What is Universe?
 Universe is an app to do pretty much everything, from running little bash/python scripts, to running terminal commands, all the way to browsing the web.
 
