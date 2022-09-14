@@ -18,7 +18,7 @@ source = "/usr/share/applications/universe.desktop"
 dest = home + "/.config/autostart/universe.desktop"
 settings = home + "/.config/universe/settings.conf"
 
-
+# Window 1 - Main Window
 class MyWindow1(Gtk.Window):
     def __init__(self):
         super().__init__(title="Universe")
