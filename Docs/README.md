@@ -1,3 +1,10 @@
+<a href="https://gitpod.io/github.com/LinuxGamer/Universe">
+  <img
+    src="https://img.shields.io/badge/Contribute%20with-Gitpod-908a85?logo=gitpod"
+    alt="Contribute with Gitpod"
+  />
+</a>
+<br>
 <details>
 <summary>IN MEMORY OF QUEEN ELIZABETH THE 2ND | 1926-2022</summary>
 On 8<sup>th</sup> September 2022, Queen Elizabeth II died peacefully at Balmoral Castle, Scotland. This banner is in memorial of her, and as such will be up until the date of her funeral (Monday 19th September 2022). R.I.P. Her Majesty.
