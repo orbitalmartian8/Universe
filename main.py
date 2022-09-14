@@ -181,6 +181,10 @@ class MyWindow2(Gtk.Window):
         emacs.set_hexpand(True)
         emacs.connect("clicked", self.on_emacs_clicked)
 
+        dolphin = Gtk.Button(label="Dolphin")
+        dolphin.set_hexpand(True)
+        dolphin.connect("clicked", self.on_dolphin_clicked)
+
         button20 = Gtk.Button(label="Back To Main Menu")
         button20.set_hexpand(True)
         button20.connect("clicked", self.on_button20_clicked)
@@ -194,11 +198,12 @@ class MyWindow2(Gtk.Window):
         grid2.attach(label2,   0, 4, 4, 2)
         grid2.attach(firefox,  3, 6, 1, 1)
         grid2.attach(alacritty,  0, 6, 1, 1)
-        grid2.attach(code, 2, 7, 1, 1)
+        grid2.attach(code, 3, 7, 1, 1)
         grid2.attach(blender, 1, 6, 1, 1)
-        grid2.attach(writer, 0, 7, 1, 1)
-        grid2.attach(nitrogen, 1, 7, 1, 1)
+        grid2.attach(writer, 1, 7, 1, 1)
+        grid2.attach(nitrogen, 2, 7, 1, 1)
         grid2.attach(emacs, 2, 6, 1, 1)
+        grid2.attach(dolphin, 0, 7, 1, 1)
         grid2.attach(label3,   0, 9, 4, 1)
         grid2.attach(button20, 0, 10, 2, 1)
         grid2.attach(button21, 2, 10, 2, 1)
@@ -233,6 +238,10 @@ class MyWindow2(Gtk.Window):
     def on_emacs_clicked(self, widget):
         print("Launcher: Emacs")
         subprocess.run(["emacs"])
+    
+    def on_dolphin_clicked(self, widget):
+        print("Launcher: Dolphin")
+        subprocess.run(["dolphin"])
 
     def on_button20_clicked(self, widget):
         print("Back To Main Menu")
