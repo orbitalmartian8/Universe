@@ -39,7 +39,7 @@ class MyWindow1(Gtk.Window):
 
         # This worked but had deprecation warnings!
         # label1 = Gtk.Label("Welcome to DTOS! Need help using DTOS or customizing it?")
-        label1 = Gtk.Label(label="Welcome to Universe!")
+        label1 = Gtk.Label(label="Welcome to your Universe!")
         label1.set_hexpand(True)
 
         label2 = Gtk.Label(label="Your hub to do basically everything.")
@@ -63,9 +63,9 @@ class MyWindow1(Gtk.Window):
         button3.set_hexpand(True)
         button3.connect("clicked", self.on_button3_clicked)
 
-        button4 = Gtk.Button(label="App Launcher")
-        button4.set_hexpand(True)
-        button4.connect("clicked", self.on_button4_clicked)
+        launcher = Gtk.Button(label="App Launcher")
+        launcher.set_hexpand(True)
+        launcher.connect("clicked", self.on_launcher_clicked)
 
         button7 = Gtk.Button(label="Exit")
         button7.set_hexpand(True)
@@ -78,7 +78,7 @@ class MyWindow1(Gtk.Window):
         grid1.attach(button1, 0, 7, 1, 1)
         grid1.attach(button2, 1, 7, 1, 1)
         grid1.attach(button3, 2, 7, 1, 1)
-        grid1.attach(button4, 1, 16, 1, 1)
+        grid1.attach(launcher, 1, 16, 1, 1)
         grid1.attach(button7, 2, 30, 1, 1)
         grid1.attach(label4,  0, 15, 3, 1)
 
@@ -97,7 +97,7 @@ class MyWindow1(Gtk.Window):
         print("User chose: Contribute")
         subprocess.run(["xdg-open", "https://github.com/LinuxGamer/Universe/blob/main/Docs/CONTRIBUTE.md"])
 
-    def on_button4_clicked(self, widget):
+    def on_launcher_clicked(self, widget):
         print("User chose: App Launcher")
         subprocess.run(
         win1.hide(),
@@ -165,17 +165,21 @@ class MyWindow2(Gtk.Window):
         code.set_hexpand(True)
         code.connect("clicked", self.on_code_clicked)
 
-        blender = Gtk.Button("Blender")
+        blender = Gtk.Button(label="Blender")
         code.set_hexpand(True)
         code.connect("clicked", self.on_blender_clicked)
 
-        writer = Gtk.Button("Libreoffice Writer")
+        writer = Gtk.Button(label="Libreoffice Writer")
         writer.set_hexpand(True)
         writer.connect("clicked", self.on_writer_clicked)
 
-        nitrogen = Gtk.Button("Nitrogen")
+        nitrogen = Gtk.Button(label="Nitrogen")
         nitrogen.set_hexpand(True)
         nitrogen.connect("clicked", self.on_nitrogen_clicked)
+
+        emacs = Gtk.Button(label="Emacs")
+        emacs.set_hexpand(True)
+        emacs.connect("clicked", self.on_emacs_clicked)
 
         button20 = Gtk.Button(label="Back To Main Menu")
         button20.set_hexpand(True)
@@ -188,12 +192,13 @@ class MyWindow2(Gtk.Window):
         #grid2.attach(image1,   0, 0, 4, 2)
         grid2.attach(label1,   0, 2, 4, 2)
         grid2.attach(label2,   0, 4, 4, 2)
-        grid2.attach(firefox,  2, 6, 1, 1)
+        grid2.attach(firefox,  3, 6, 1, 1)
         grid2.attach(alacritty,  0, 6, 1, 1)
         grid2.attach(code, 2, 7, 1, 1)
         grid2.attach(blender, 1, 6, 1, 1)
         grid2.attach(writer, 0, 7, 1, 1)
         grid2.attach(nitrogen, 1, 7, 1, 1)
+        grid2.attach(emacs, 2, 6, 1, 1)
         grid2.attach(label3,   0, 9, 4, 1)
         grid2.attach(button20, 0, 10, 2, 1)
         grid2.attach(button21, 2, 10, 2, 1)
@@ -224,6 +229,10 @@ class MyWindow2(Gtk.Window):
     def on_nitrogen_clicked(self, widget):
         print("Launcher: Nitrogen")
         subprocess.run(["nitrogen"])
+
+    def on_emacs_clicked(self, widget):
+        print("Launcher: Emacs")
+        subprocess.run(["emacs"])
 
     def on_button20_clicked(self, widget):
         print("Back To Main Menu")
