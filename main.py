@@ -37,8 +37,6 @@ class MyWindow1(Gtk.Window):
         #image1 = Gtk.Image()
         #image1.set_from_file("/home/dt/nc/Org/test/python-app/image1.png")
 
-        # This worked but had deprecation warnings!
-        # label1 = Gtk.Label("Welcome to DTOS! Need help using DTOS or customizing it?")
         label1 = Gtk.Label(label="Welcome to your Universe!")
         label1.set_hexpand(True)
 
@@ -67,13 +65,9 @@ class MyWindow1(Gtk.Window):
         launcher.set_hexpand(True)
         launcher.connect("clicked", self.on_launcher_clicked)
 
-        terminal = Gtk.Button(label="Terminal")
+        terminal = Gtk.Button(label="TEST - Terminal (BROKEN)")
         terminal.set_hexpand(True)
         terminal.connect("clicked", self.on_terminal_clicked)
-
-        entry = Gtk.Button(label="EntryWindow")
-        entry.set_hexpand(True)
-        entry.connect("clicked", self.on_entry_clicked)
 
         button7 = Gtk.Button(label="Exit")
         button7.set_hexpand(True)
@@ -88,7 +82,6 @@ class MyWindow1(Gtk.Window):
         grid1.attach(button3, 2, 7, 1, 1)
         grid1.attach(launcher, 0, 16, 1, 1)
         grid1.attach(terminal, 1 ,16, 1, 1)
-        grid1.attach(entry, 2, 16, 1, 1)
         grid1.attach(button7, 2, 30, 1, 1)
         grid1.attach(label4,  0, 15, 3, 1)
 
@@ -119,12 +112,6 @@ class MyWindow1(Gtk.Window):
         subprocess.run(
         win1.hide(),
         win2.show_all())
-
-    def on_entry_clicked(self, widget):
-        print("User chose: EntryWindow")
-        subprocess.run(
-            win1.hide(),
-            EntryWindow.show())
 
     def save_settings(self, state):
         with open(settings, "w") as f:
@@ -284,7 +271,7 @@ class MyWindow2(Gtk.Window):
         print("Exit")
         button21.connect("clicked", Gtk.main_quit)
 
-# Window 3 - App Launcher
+# Window 3 - Terminal
 class MyWindow3(Gtk.Window):
     def __init__(self):
         super().__init__(title="Universe: Terminal Emulator")
@@ -299,6 +286,23 @@ class MyWindow3(Gtk.Window):
         grid3 = Gtk.Grid(row_spacing    = 10,
                          column_spacing = 10,
                          column_homogeneous = True)
+
+        exit = Gtk.Button(label="Exit")
+        exit.set_hexpand(True)
+        exit.connect("clicked", Gtk.main_quit)
+        
+        label1 = Gtk.Label(label="Terminal")
+        label1.set_hexpand(True)
+
+        grid3.attach(label1, 1, 1, 1, 1)
+        grid3.attach(exit, 1, 6, 1, 1)
+        
+        self.add(frame3)
+        frame3.add(grid3)
+
+        def on_exit_clicked(self, widget):
+            print("Exit")
+            exit.connect("clicked", Gtk.main_quit)
 
 win1 = MyWindow1()
 win2 = MyWindow2()
