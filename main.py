@@ -36,7 +36,7 @@ class MyWindow1(Gtk.Window):
         #image1 = Gtk.Image()
         #image1.set_from_file("/home/dt/nc/Org/test/python-app/image1.png")
 
-        label1 = Gtk.Label(label="Welcome to your Universe!")
+        label1 = Gtk.Label(label="Welcome " + user + " to your Universe!")
         label1.set_hexpand(True)
 
         label2 = Gtk.Label(label="Your hub to do basically everything.")
@@ -295,10 +295,10 @@ class MyWindow3(Gtk.Window):
         self.add(frame3)
         frame3.add(grid3)
         
-        def on_button20_clicked(self, widget):
-            print("Back To Main Menu")
-            win3.hide()
-            win1.show_all()
+        # def on_button20_clicked(self, widget):
+        #     print("Back To Main Menu")
+        #     win3.hide()
+        #     win1.show_all()
 
         def on_exit_clicked(self, widget):
             print("Exit")

@@ -18,6 +18,10 @@ Universe is an app to do pretty much everything, from running little bash/python
 Well, I've wanted something to do everything for a while now, and nothing I've found has met the specific needs that I have, which is why I started this project. Everyone is allowed to contribute, and contributions are encouraged.
 
 <details>
+<summary>Screenshots</summary>
+image.png
+
+<details>
 <summary>📁 Roadmap</summary>
 <br>
 
