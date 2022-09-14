@@ -45,8 +45,11 @@ class MyWindow1(Gtk.Window):
         label2 = Gtk.Label(label="Your hub to do basically everything.")
         label2.set_hexpand(True)
 
-        label3 = Gtk.Label()
-        label4 = Gtk.Label()
+        label3 = Gtk.Label(label="About:")
+        label3.set_hexpand(True)
+
+        label4 = Gtk.Label(label="Things to do:")
+        label4.set_hexpand(True)
 
         button1 = Gtk.Button(label="About Universe")
         button1.set_hexpand(True)
@@ -60,6 +63,10 @@ class MyWindow1(Gtk.Window):
         button3.set_hexpand(True)
         button3.connect("clicked", self.on_button3_clicked)
 
+        button4 = Gtk.Button(label="App Launcher")
+        button4.set_hexpand(True)
+        button4.connect("clicked", self.on_button4_clicked)
+
         button7 = Gtk.Button(label="Exit")
         button7.set_hexpand(True)
         button7.connect("clicked", Gtk.main_quit)
@@ -71,8 +78,9 @@ class MyWindow1(Gtk.Window):
         grid1.attach(button1, 0, 7, 1, 1)
         grid1.attach(button2, 1, 7, 1, 1)
         grid1.attach(button3, 2, 7, 1, 1)
-        grid1.attach(button7, 2, 10, 1, 1)
-        grid1.attach(label4,  0, 10, 3, 1)
+        grid1.attach(button4, 1, 16, 1, 1)
+        grid1.attach(button7, 2, 30, 1, 1)
+        grid1.attach(label4,  0, 15, 3, 1)
 
         self.add(frame1)
         frame1.add(grid1)
@@ -88,6 +96,12 @@ class MyWindow1(Gtk.Window):
     def on_button3_clicked(self, widget):
         print("User chose: Contribute")
         subprocess.run(["xdg-open", "https://github.com/LinuxGamer/Universe/blob/main/Docs/CONTRIBUTE.md"])
+
+    def on_button4_clicked(self, widget):
+        print("User chose: App Launcher")
+        subprocess.run(
+        win1.hide(),
+        win2.show_all())
 
     def save_settings(self, state):
         with open(settings, "w") as f:
@@ -114,10 +128,118 @@ class MyWindow1(Gtk.Window):
                 os.unlink(dest)
         self.save_settings(widget.get_active())
 
-win1 = MyWindow1()
+# Window 2 - App Launcher
+class MyWindow2(Gtk.Window):
+    def __init__(self):
+        super().__init__(title="Universe: App Launcher")
 
+        self.set_border_width(10)
+        self.set_default_size(640, 300)
+        self.set_position(Gtk.WindowPosition.CENTER)
+        self.set_resizable(False)
+
+        frame2 = Gtk.Frame(label="App Launcher")
+
+        grid2 = Gtk.Grid(row_spacing    = 10,
+                         column_spacing = 10,
+                         column_homogeneous = True)
+
+        #image1 = Gtk.Image()
+        #image1.set_from_file("/home/dt/nc/Org/test/python-app/image1.png")
+
+        label1 = Gtk.Label(label="App Launcher")
+        label1.set_hexpand(True)
+
+        label2 = Gtk.Label()
+        label3 = Gtk.Label()
+
+        firefox = Gtk.Button(label="Firefox")
+        firefox.set_hexpand(True)
+        firefox.connect("clicked", self.on_firefox_clicked)
+
+        alacritty = Gtk.Button(label="Alacritty")
+        alacritty.set_hexpand(True)
+        alacritty.connect("clicked", self.on_alacritty_clicked)
+
+        code = Gtk.Button(label="Visual Studio Code")
+        code.set_hexpand(True)
+        code.connect("clicked", self.on_code_clicked)
+
+        blender = Gtk.Button("Blender")
+        code.set_hexpand(True)
+        code.connect("clicked", self.on_blender_clicked)
+
+        writer = Gtk.Button("Libreoffice Writer")
+        writer.set_hexpand(True)
+        writer.connect("clicked", self.on_writer_clicked)
+
+        nitrogen = Gtk.Button("Nitrogen")
+        nitrogen.set_hexpand(True)
+        nitrogen.connect("clicked", self.on_nitrogen_clicked)
+
+        button20 = Gtk.Button(label="Back To Main Menu")
+        button20.set_hexpand(True)
+        button20.connect("clicked", self.on_button20_clicked)
+
+        button21 = Gtk.Button(label="Exit")
+        button21.set_hexpand(True)
+        button21.connect("clicked", Gtk.main_quit)
+
+        #grid2.attach(image1,   0, 0, 4, 2)
+        grid2.attach(label1,   0, 2, 4, 2)
+        grid2.attach(label2,   0, 4, 4, 2)
+        grid2.attach(firefox,  2, 6, 1, 1)
+        grid2.attach(alacritty,  0, 6, 1, 1)
+        grid2.attach(code, 2, 7, 1, 1)
+        grid2.attach(blender, 1, 6, 1, 1)
+        grid2.attach(writer, 0, 7, 1, 1)
+        grid2.attach(nitrogen, 1, 7, 1, 1)
+        grid2.attach(label3,   0, 9, 4, 1)
+        grid2.attach(button20, 0, 10, 2, 1)
+        grid2.attach(button21, 2, 10, 2, 1)
+
+        self.add(frame2)
+        frame2.add(grid2)
+
+    def on_firefox_clicked(self, widget):
+        print("Launcher: Firefox")
+        subprocess.run(["firefox"])
+
+    def on_alacritty_clicked(self, widget):
+        print("Launcher: Alacritty")
+        subprocess.run(["alacritty"])
+
+    def on_code_clicked(self, widget):
+        print("Launcher: Visual Studio Code")
+        subprocess.run(["code"])
+
+    def on_blender_clicked(self, widget):
+        print("Launcher: Blender")
+        subprocess.run(["blender"])
+    
+    def on_writer_clicked(self, widget):
+        print("Launcher: Libreoffice Writer")
+        subprocess.run(["libreoffice --writer"])
+
+    def on_nitrogen_clicked(self, widget):
+        print("Launcher: Nitrogen")
+        subprocess.run(["nitrogen"])
+
+    def on_button20_clicked(self, widget):
+        print("Back To Main Menu")
+        win2.hide()
+        win1.show_all()
+
+    def on_button21_clicked(self, widget):
+        print("Exit")
+        button21.connect("clicked", Gtk.main_quit)
+
+
+win1 = MyWindow1()
+win2 = MyWindow2()
 
 win1.connect("destroy", Gtk.main_quit)
+win2.connect("destroy", Gtk.main_quit)
 
 
 win1.show_all()
