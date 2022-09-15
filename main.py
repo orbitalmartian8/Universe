@@ -252,6 +252,8 @@ class MyWindow2(Gtk.Window):
         print("Launcher: GIMP")
         subprocess.run(["gimp"])
 
+    
+
     def on_button20_clicked(self, widget):
         print("Back To Main Menu")
         win2.hide()
