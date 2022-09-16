@@ -46,3 +46,6 @@ Well, I've wanted something to do everything for a while now, and nothing I've f
 # Other Information
 ## How to contribute
 To find how to contribute, please visit [CONTRIBUTE.md](CONTRIBUTE.md)
+
+## Discord
+We have a Discord server to chat about Development and Use of Universe [HERE](https://discord.gg/U6jB22kvYz)
