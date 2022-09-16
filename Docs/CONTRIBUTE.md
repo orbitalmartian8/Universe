@@ -14,7 +14,7 @@ Then,
 Alternatively you could run
 
 ```bash
-python main.py
+python3 main.py
 ```
 
 ^ But this is subject to change when new files are added, etc.
