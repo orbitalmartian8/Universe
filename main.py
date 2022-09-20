@@ -33,8 +33,7 @@ class MyWindow1(Gtk.Window):
                          column_spacing = 10,
                          column_homogeneous = True)
 
-        #image1 = Gtk.Image()
-        #image1.set_from_file("/home/dt/nc/Org/test/python-app/image1.png")
+
 
         label1 = Gtk.Label(label="Welcome " + user + " to your Universe!")
         label1.set_hexpand(True)
@@ -68,7 +67,6 @@ class MyWindow1(Gtk.Window):
         button7.set_hexpand(True)
         button7.connect("clicked", Gtk.main_quit)
 
-        #grid1.attach(image1,  0, 0, 3, 2)
         grid1.attach(label1,  0, 2, 3, 2)
         grid1.attach(label2,  0, 4, 3, 2)
         grid1.attach(label3,  0, 6, 3, 1)
@@ -81,6 +79,7 @@ class MyWindow1(Gtk.Window):
 
         self.add(frame1)
         frame1.add(grid1)
+       
 
     def on_terminal_clicked(self, widget):
         print("User chose: Launch Terminal")
@@ -187,7 +186,11 @@ class MyWindow2(Gtk.Window):
 
         gimp = Gtk.Button(label="GIMP")
         gimp.set_hexpand(True)
-        gimp.connect("clicked",self.on_gimp_clicked)
+        gimp.connect("clicked", self.on_gimp_clicked)
+
+        chrome = Gtk.Button(label="Chrome")
+        chrome.set_hexpand(True)
+        gimp.connect("clicked", self.on_chrome_clicked)
 
         button20 = Gtk.Button(label="Back To Main Menu")
         button20.set_hexpand(True)
@@ -203,6 +206,7 @@ class MyWindow2(Gtk.Window):
         grid2.attach(firefox,  0, 7, 1, 1)
         grid2.attach(alacritty,  0, 6, 1, 1)
         grid2.attach(code, 0, 8, 1, 1)
+        grid2.attach(chrome, 1, 8, 1, 1)
         grid2.attach(blender, 1, 6, 1, 1)
         grid2.attach(writer, 2, 7, 1, 1)
         grid2.attach(nitrogen, 3, 7, 1, 1)
@@ -251,6 +255,10 @@ class MyWindow2(Gtk.Window):
     def on_gimp_clicked(self, widget):
         print("Launcher: GIMP")
         subprocess.run(["gimp"])
+    
+    def on_chrome_clicked(self, widget):
+        print("Launcher: Chrome")
+        subprocess.run(["chrome"])
 
     
 
