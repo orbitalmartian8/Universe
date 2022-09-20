@@ -5,7 +5,7 @@ Fork the repo:
 git clone --recursive https://github.com/LinuxGamer/Universe
 ```
 
-Then, 
+Then,
 
 ```bash
 ./compile.sh
@@ -14,7 +14,7 @@ Then,
 Alternatively you could run
 
 ```bash
-g++ -o Universe main.cpp
+python3 main.py
 ```
 
 ^ But this is subject to change when new files are added, etc.
