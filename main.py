@@ -190,7 +190,11 @@ class MyWindow2(Gtk.Window):
 
         chrome = Gtk.Button(label="Chrome")
         chrome.set_hexpand(True)
-        gimp.connect("clicked", self.on_chrome_clicked)
+        chrome.connect("clicked", self.on_chrome_clicked)
+
+        #ls = Gtk.Button(label="LibreSprite (Legacy)")
+        #ls.set_hexpand(True)
+
 
         button20 = Gtk.Button(label="Back To Main Menu")
         button20.set_hexpand(True)
