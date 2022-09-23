@@ -13,9 +13,9 @@ import subprocess
 
 home = expanduser("~")
 user = os.getlogin()
-source = "/usr/share/applications/universe.desktop"
-dest = home + "/.config/autostart/universe.desktop"
-settings = home + "/.config/universe/settings.conf"
+# source = "/usr/share/applications/universe.desktop"
+# dest = home + "/.config/autostart/universe.desktop"
+# settings = home + "/.config/universe/settings.conf"
 
 # Window 1 - Main Window
 class MyWindow1(Gtk.Window):
@@ -25,7 +25,7 @@ class MyWindow1(Gtk.Window):
         self.set_border_width(10)
         self.set_default_size(640, 300)
         self.set_position(Gtk.WindowPosition.CENTER)
-        self.set_resizable(False)
+        self.set_resizable(True)
 
         frame1 = Gtk.Frame(label="Universe")
 
@@ -135,7 +135,7 @@ class MyWindow2(Gtk.Window):
         self.set_border_width(10)
         self.set_default_size(640, 300)
         self.set_position(Gtk.WindowPosition.CENTER)
-        self.set_resizable(False)
+        self.set_resizable(True)
 
         frame2 = Gtk.Frame(label="App Launcher")
 
@@ -192,8 +192,9 @@ class MyWindow2(Gtk.Window):
         chrome.set_hexpand(True)
         chrome.connect("clicked", self.on_chrome_clicked)
 
-        #ls = Gtk.Button(label="LibreSprite (Legacy)")
-        #ls.set_hexpand(True)
+        ls = Gtk.Button(label="LibreSprite (Legacy)")
+        ls.set_hexpand(True)
+        ls.connect("clicked", self.on_ls_clicked)
 
 
         button20 = Gtk.Button(label="Back To Main Menu")
@@ -208,12 +209,13 @@ class MyWindow2(Gtk.Window):
         grid2.attach(label1,   0, 2, 4, 2)
         grid2.attach(label2,   0, 4, 4, 2)
         grid2.attach(firefox,  0, 7, 1, 1)
+        grid2.attach(ls,       3, 7, 1, 1)
         grid2.attach(alacritty,  0, 6, 1, 1)
-        grid2.attach(code, 0, 8, 1, 1)
-        grid2.attach(chrome, 1, 8, 1, 1)
+        grid2.attach(code, 1, 8, 1, 1)
+        grid2.attach(chrome, 2, 8, 1, 1)
         grid2.attach(blender, 1, 6, 1, 1)
         grid2.attach(writer, 2, 7, 1, 1)
-        grid2.attach(nitrogen, 3, 7, 1, 1)
+        grid2.attach(nitrogen, 0, 8, 1, 1)
         grid2.attach(emacs, 2, 6, 1, 1)
         grid2.attach(dolphin, 3, 6, 1, 1)
         grid2.attach(gimp, 1, 7, 1, 1)
@@ -235,6 +237,10 @@ class MyWindow2(Gtk.Window):
     def on_code_clicked(self, widget):
         print("Launcher: Visual Studio Code")
         subprocess.run(["code"])
+
+    def on_ls_clicked(self, widget):
+        print("Launcher: LibreSprite (Legacy)")
+        subprocess.run(["libresprite"])
 
     def on_blender_clicked(self, widget):
         print("Launcher: Blender")
@@ -283,9 +289,13 @@ class MyWindow3(Gtk.Window):
         self.set_border_width(10)
         self.set_default_size(640, 300)
         self.set_position(Gtk.WindowPosition.CENTER)
-        self.set_resizable(False)
-
+        self.set_resizable(True)
+      
+        
+        
         frame3 = Gtk.Frame(label="Terminal Emulator")
+        
+        self.add(frame3)
 
         grid3 = Gtk.Grid(row_spacing    = 10,
                          column_spacing = 10,
@@ -298,23 +308,22 @@ class MyWindow3(Gtk.Window):
         label1 = Gtk.Label(label="Terminal")
         label1.set_hexpand(True)
 
-        # button20 = Gtk.Button(label="Back To Main Menu")
-        # button20.set_hexpand(True)
-        # button20.connect("clicked", self.on_button20_clicked)
+        menu = Gtk.Button(label="Back To Main Menu")
+        menu.set_hexpand(True)
+        menu.connect("clicked", self.on_menu_clicked)
 
         grid3.attach(label1, 1, 1, 1, 1)
-        # grid3.attach(button20, 0, 6, 1, 1)
-        grid3.attach(exit, 1, 6, 1, 1)
+        grid3.attach(menu, 1, 8, 1, 1)
+        grid3.attach(exit, 2, 8, 1, 1)
         
-        self.add(frame3)
         frame3.add(grid3)
         
-        # def on_button20_clicked(self, widget):
-        #     print("Back To Main Menu")
-        #     win3.hide()
-        #     win1.show_all()
+    def on_menu_clicked(self, widget):
+            print("Back To Main Menu")
+            win3.hide()
+            win1.show()
 
-        def on_exit_clicked(self, widget):
+    def on_exit_clicked(self, widget):
             print("Exit")
             exit.connect("clicked", Gtk.main_quit)
 
