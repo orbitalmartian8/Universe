@@ -192,10 +192,17 @@ class MyWindow2(Gtk.Window):
         chrome.set_hexpand(True)
         chrome.connect("clicked", self.on_chrome_clicked)
 
+        chromium = Gtk.Button(label="Chromium")
+        chromium.set_hexpand(True)
+        chromium.connect("clicked", self.on_chromium_clicked)
+
         ls = Gtk.Button(label="LibreSprite (Legacy)")
         ls.set_hexpand(True)
         ls.connect("clicked", self.on_ls_clicked)
 
+        steam = Gtk.Button(label="Steam")
+        steam.set_hexpand(True)
+        steam.connect("clicked", self.on_steam_clicked)
 
         button20 = Gtk.Button(label="Back To Main Menu")
         button20.set_hexpand(True)
@@ -208,20 +215,30 @@ class MyWindow2(Gtk.Window):
         #grid2.attach(image1,   0, 0, 4, 2)
         grid2.attach(label1,   0, 2, 4, 2)
         grid2.attach(label2,   0, 4, 4, 2)
-        grid2.attach(firefox,  0, 7, 1, 1)
-        grid2.attach(ls,       3, 7, 1, 1)
-        grid2.attach(alacritty,  0, 6, 1, 1)
-        grid2.attach(code, 1, 8, 1, 1)
-        grid2.attach(chrome, 2, 8, 1, 1)
-        grid2.attach(blender, 1, 6, 1, 1)
-        grid2.attach(writer, 2, 7, 1, 1)
-        grid2.attach(nitrogen, 0, 8, 1, 1)
-        grid2.attach(emacs, 2, 6, 1, 1)
-        grid2.attach(dolphin, 3, 6, 1, 1)
-        grid2.attach(gimp, 1, 7, 1, 1)
+
         grid2.attach(label3,   0, 9, 4, 1)
         grid2.attach(button20, 0, 10, 2, 1)
         grid2.attach(button21, 2, 10, 2, 1)
+# a b c d e f g h i j k l m n o p q r s t u v w x y z
+        grid2.attach(alacritty,  0, 6, 1, 1)
+        grid2.attach(blender, 1, 6, 1, 1)
+        grid2.attach(chrome, 2, 6, 1, 1)
+        grid2.attach(chromium, 3, 6, 1, 1)
+        grid2.attach(dolphin, 0, 7, 1, 1)
+        grid2.attach(emacs, 1, 7, 1, 1)
+        grid2.attach(firefox,  2, 7, 1, 1)
+        grid2.attach(gimp, 3, 7, 1, 1)
+        grid2.attach(ls, 0, 8, 1, 1)
+        grid2.attach(steam, 1, 8, 1, 1)
+        grid2.attach(writer, 2, 8, 1, 1)
+        grid2.attach(nitrogen, 3, 8, 1, 1)
+        grid2.attach(code, 0, 9, 1, 1)
+
+
+
+
+
+
 
         self.add(frame2)
         frame2.add(grid2)
@@ -241,6 +258,10 @@ class MyWindow2(Gtk.Window):
     def on_ls_clicked(self, widget):
         print("Launcher: LibreSprite (Legacy)")
         subprocess.run(["libresprite"])
+
+    def on_steam_clicked(self, widget):
+        print("Launcher: Steam")
+        subprocess.run(["steam"])
 
     def on_blender_clicked(self, widget):
         print("Launcher: Blender")
@@ -270,6 +291,9 @@ class MyWindow2(Gtk.Window):
         print("Launcher: Chrome")
         subprocess.run(["chrome"])
 
+    def on_chromium_clicked(self, widget):
+        print("Launcher: Chromium")
+        subprocess.run(["chromium"])
     
 
     def on_button20_clicked(self, widget):
