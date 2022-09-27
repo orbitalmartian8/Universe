@@ -4,7 +4,10 @@
     alt="Contribute with Gitpod"
   />
 </a>
-![example workflow](https://github.com/LinuxGamer/Universe/actions/workflows/python-app.yml/badge.svg)
+  <img 
+	src="https://github.com/LinuxGamer/Universe/actions/workflows/python-app.yml/badge.svg"
+	alt="Python Build"
+  />
 <br>
 
 # What is Universe?
