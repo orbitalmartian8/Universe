@@ -1,13 +1,5 @@
-<a href="https://gitpod.io/github.com/LinuxGamer/Universe">
-  <img
-    src="https://img.shields.io/badge/Contribute%20with-Gitpod-908a85?logo=gitpod"
-    alt="Contribute with Gitpod"
-  />
-</a>
-  <img 
-	src="https://github.com/LinuxGamer/Universe/actions/workflows/python-app.yml/badge.svg"
-	alt="Python Build"
-  />
+<a href="https://gitpod.io/github.com/LinuxGamer/Universe"><img src="https://img.shields.io/badge/Contribute%20with-Gitpod-908a85?logo=gitpod" alt="Contribute with Gitpod" /></a>
+<img src="https://github.com/LinuxGamer/Universe/actions/workflows/python-app.yml/badge.svg" alt="Python Build" />
 <br>
 
 # What is Universe?
