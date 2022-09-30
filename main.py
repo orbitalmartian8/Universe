@@ -295,7 +295,6 @@ class MyWindow2(Gtk.Window):
         print("Launcher: Chromium")
         subprocess.run(["chromium"])
     
-
     def on_button20_clicked(self, widget):
         print("Back To Main Menu")
         win2.hide()
