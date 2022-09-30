@@ -16,7 +16,7 @@ autotiling==1.6.1
 Babel==2.10.3
 backcall==0.2.0
 bcrypt==4.0.0
-Beaker==1.11.0
+#Beaker==1.11.0
 beautifulsoup4==4.11.1
 bleach==5.0.1
 blivet==3.6.0
@@ -150,8 +150,8 @@ pyasn1-modules==0.2.8
 pycairo==1.21.0
 pycosat==0.6.3
 pycparser==2.21
-pycrypto==2.6.1
-pycryptodomex==3.15.0
+#pycrypto==2.6.1
+#pycryptodomex==3.15.0
 pycups==2.0.1
 pycurl==7.45.1
 pyDeprecate==0.3.2
