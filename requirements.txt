@@ -37,7 +37,7 @@ commonmark==0.9.1
 #conda-package-handling==1.7.3
 cryptography==38.0.1
 cssselect2==0.7.0
-cupshelpers==1.0
+#cupshelpers==1.0
 cytoolz==0.12.0
 DALL-E==0.1
 dasbus==1.6
