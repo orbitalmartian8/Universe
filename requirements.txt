@@ -20,7 +20,7 @@ Beaker==1.11.0
 beautifulsoup4==4.11.1
 bleach==5.0.1
 blivet==3.6.0
-blivet-gui==2.3.0
+#blivet-gui==2.3.0
 blobfile==1.3.4
 Brotli==1.0.9
 cached-property==1.5.2
