@@ -8,19 +8,8 @@ git clone --recursive https://github.com/LinuxGamer/Universe
 Then,
 
 ```bash
-./compile.sh
-```
-
-Alternatively you could run
-
-```bash
 python3 main.py
 ```
-
-^ But this is subject to change when new files are added, etc.
-
-### To Run
-To run Universe, simply enter ```./Everything```.
 
 ## First contributers
 
