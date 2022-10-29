@@ -24,10 +24,11 @@ Well, I've wanted something to do everything for a while now, and nothing I've f
 
    | Task | Status | Expected Release |
    | :--- | :--- | :--- |
-   | Add window | In Progress | v0.1 |
-   | Add script tab | Not Started | v0.1 |
-   | Add run script buttons | Not Started | v0.1 |
-   | Add terminal tab  | Not Started | v0.5 |
+   | Add window | Done | v0.1.0-alpha |
+   | Add app launcher | Started | v1.0 |
+   | Add script tab | Not Started | v2.0 |
+   | Add run script buttons | Not Started | v2.0 |
+   | Add terminal tab  | Not Started | v2.5 |
 
 
 <br>
