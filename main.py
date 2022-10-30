@@ -94,7 +94,7 @@ class MyWindow1(Gtk.Window):
 
     def on_contribute_clicked(self, widget):
         print("User chose: Contribute")
-        subprocess.run(["xdg-open", "https://github.com/LinuxGamer/Universe/blob/main/Docs/CONTRIBUTE.md"])
+        subprocess.run(["xdg-open", "https://github.com/LinuxGamer/Universe/blob/main/Docs/CONTRIBUTING.md"])
 
     def on_launcher_clicked(self, widget):
         print("User chose: App Launcher")
