@@ -37,7 +37,7 @@ Well, I've wanted something to do everything for a while now, and nothing I've f
 
 # Other Information
 ## How to contribute
-To find how to contribute, please visit [CONTRIBUTE.md](CONTRIBUTE.md)
+To find how to contribute, please visit [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Feature Requests
 If you would like to see a specific feature in Universe, either, contribute using the information above, or by creating an issue using the Feature Request Template.
