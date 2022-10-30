@@ -8,6 +8,12 @@ git clone --recursive https://github.com/LinuxGamer/Universe
 Then,
 
 ```bash
+cd Universe
+```
+
+Then,
+
+```bash
 python3 main.py
 ```
 
