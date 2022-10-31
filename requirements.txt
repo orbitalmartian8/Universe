@@ -3,7 +3,7 @@ aiohttp==3.8.3
 aiosignal==1.2.0
 alabaster==0.7.12
 antlr4-python3-runtime==4.11.1
-anyio==3.6.1
+anyio==3.6.2
 app==0.0.1
 argcomplete==2.0.0
 argon2-cffi==21.3.0
