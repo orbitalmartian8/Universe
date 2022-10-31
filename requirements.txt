@@ -259,3 +259,4 @@ xmltodict==0.13.0
 yarl==1.8.1
 yt-dlp==2022.9.1
 ytmusicapi==0.23.0
+PyGObject==3.42.2
