@@ -45,3 +45,6 @@ If you would like to see a specific feature in Universe, either, contribute usin
 
 ## Discord
 We have a Discord server to chat about Development and Use of Universe [HERE](https://discord.gg/U6jB22kvYz)
+
+## Matrix
+We have a Matrix server bridged to the Discord server, for the same purposes [HERE](https://matrix.to/#/#universe-app:matrix.org)
