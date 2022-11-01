@@ -26,6 +26,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
+        sudo apt install python-gtk2
         pip install pgi
         sudo apt install libgirepository1.0-dev
         pip install PyGObject
