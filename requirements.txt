@@ -100,7 +100,7 @@ Mako==1.2.3
 Markdown==3.4.1
 MarkupSafe==2.1.1
 matplotlib-inline==0.1.6
-mercurial==6.2.2
+mercurial==6.2.3
 meson==0.63.2
 mistune==2.0.4
 msgpack==1.0.4
