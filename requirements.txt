@@ -112,7 +112,7 @@ nbclassic==0.4.3
 nbclient==0.6.8
 nbconvert==7.0.0
 nbformat==5.6.1
-nest-asyncio==1.5.5
+nest-asyncio==1.5.6
 nftables==0.1
 notebook==6.4.12
 notebook-shim==0.1.0
