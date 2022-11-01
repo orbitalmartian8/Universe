@@ -29,7 +29,8 @@ jobs:
         pip install pgi
         sudo apt install libgirepository1.0-dev
         pip install PyGObject
-        pip install flake8
+#        pip install flake8
+        pip install pytest
 
 #   - name: Lint with flake8
 #      run: |
