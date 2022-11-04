@@ -90,7 +90,7 @@ class MyWindow1(Gtk.Window):
 
     def on_about_clicked(self, widget):
         print("User chose: About Universe")
-        subprocess.run(["xdg-open", "https://github.com/LinuxGamer/Universe/blob/main/Docs/README.md"])
+        subprocess.run(["xdg-open", "https://github.com/LinuxGamer/Universe/wiki/About"])
 
     def on_contribute_clicked(self, widget):
         print("User chose: Contribute")
