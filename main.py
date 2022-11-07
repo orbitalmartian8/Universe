@@ -21,6 +21,7 @@ user = os.getlogin()
 class MyWindow1(Gtk.Window):
     def __init__(self):
         super().__init__(title="Universe")
+        super().__init__(icon="universe.jpg")
 
         self.set_border_width(10)
         self.set_default_size(640, 300)
@@ -59,6 +60,10 @@ class MyWindow1(Gtk.Window):
         launcher.set_hexpand(True)
         launcher.connect("clicked", self.on_launcher_clicked)
 
+        dashboard = Gtk.Button(label="Proceed to Dashboard")
+        dashboard.set_hexpand(True)
+        dashboard.connect("clicked", self.on_dashboard_clicked)
+
         terminal = Gtk.Button(label="TEST - Terminal (BROKEN)")
         terminal.set_hexpand(True)
         terminal.connect("clicked", self.on_terminal_clicked)
@@ -72,8 +77,9 @@ class MyWindow1(Gtk.Window):
         grid1.attach(label3,  0, 6, 3, 1)
         grid1.attach(about, 0, 7, 1, 1)
         grid1.attach(contribute, 1, 7, 1, 1)
-        grid1.attach(launcher, 0, 16, 1, 1)
-        grid1.attach(terminal, 1 ,16, 1, 1)
+#        grid1.attach(launcher, 0, 16, 1, 1)
+#        grid1.attach(terminal, 1 ,16, 1, 1)
+        grid1.attach(dashboard, 1, 16, 1, 1)
         grid1.attach(button7, 2, 30, 1, 1)
         grid1.attach(label4,  0, 15, 3, 1)
 
@@ -87,6 +93,11 @@ class MyWindow1(Gtk.Window):
         win1.hide(),
         win3.show_all())
         
+    def on_dashboard_clicked(self, widget):
+        print("User chose: Proceed to Dashboard")
+        subprocess.run(
+        win1.hide(),
+        dashboard.show_all())
 
     def on_about_clicked(self, widget):
         print("User chose: About Universe")
@@ -351,14 +362,36 @@ class MyWindow3(Gtk.Window):
             exit.connect("clicked", Gtk.main_quit)
 
         
+class MyWindow4(Gtk.Window):
+    def __init__(self):
+        super().__init__(title="Universe: Dashboard")
+
+        self.set_border_width(10)
+        self.set_default_size(640, 300)
+        self.set_position(Gtk.WindowPosition.CENTER)
+        self.set_resizable(True)
+
+
+
+        frame3 = Gtk.Frame(label="Universe: Dashboard")
+
+        self.add(frame3)
+
+        grid3 = Gtk.Grid(row_spacing    = 10,
+                         column_spacing = 10,
+                         column_homogeneous = True)
+
+
 
 win1 = MyWindow1()
 win2 = MyWindow2()
 win3 = MyWindow3()
+dashboard = MyWindow4()
 
 win1.connect("destroy", Gtk.main_quit)
 win2.connect("destroy", Gtk.main_quit)
 win3.connect("destroy", Gtk.main_quit)
+dashboard.connect("destroy", Gtk.main_quit)
 
 
 win1.show_all()
